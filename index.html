@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Giphy's Box</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+      href="src/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    />
+  </head>
+
+  <body>
+    <header class="jumbotron header">
+      <h1>The Giphy's Box</h1>
+      <div class="lead">
+        If you like it, click on the gif to give it your love :)
+      </div>
+      <hr class="my-4" />
+      <form class="input-group mb-3" id="searchForm">
+        <input
+          type="text"
+          id="searchInput"
+          class="form-control"
+          placeholder="What are you looking for?"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="submit"
+            id="searchGif"
+          >
+            Search!
+          </button>
+        </div>
+      </form>
+    </header>
+    <!--Header-->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-5"></div>
+        
+        <button type="button" class="btn btn-outline-primary active">
+          All
+        </button>
+
+     
+        <button type="button" id="btnModal" class="btn btn-outline-danger data-toggle="modal" data-target="#exampleModal">
+          Favorites
+        </button>
+        
+      </div>
+      <br />
+
+      <form id="gifGallery" class="container row">
+        <!--gifs are here-->
+      </form>
+    </div>
+
+        <!-- Modal -->
+        <div id="modalContainer" class="modalContainer">
+          <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Your Favorite Gifs</h2>
+            <div id="favoritesGallery" class="container row">
+              
+            </div>
+          </div>
+        </div>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="src/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  justify-items: center;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 30px auto;
+
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card .like {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: #f1f1f1;
+  font-size: 100px;
+  transition: 0.3s;
+}
+.card input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  opacity: 0;
+  cursor: pointer;
+}
+.card:hover > .like {
+  transform: translate(-50%, -50%) scale(1);
+}
+.card input:checked + .like {
+  color: #e74c3c;
+}
+
+.modalContainer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalContainer .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-top: 10px solid #e74c3c;
+  width: 60%;
+}
+
+.modalContainer .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modalContainer .close:hover,
+.modalContainer .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
